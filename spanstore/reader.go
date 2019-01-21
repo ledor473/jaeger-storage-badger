@@ -256,7 +256,8 @@ func (r *TraceReader) durationQueries(query *spanstore.TraceQueryParameters, ids
 		}
 	}
 
-	model.SortTraceIDs(filteredResults)
+	// model.SortTraceIDs(filteredResults)
+	SortTraceIDs(filteredResults)
 
 	// This is an ugly hack at this point - but has no impact on performance really
 	for _, tr := range filteredResults {
